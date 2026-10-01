@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Yassine Rachidy</title>
+
+  <meta name="description" content="Yassine Rachidy is a PhD student at UM6P working on LLM safety, alignment, and mechanistic interpretability." />
+  <link rel="canonical" href="https://yrachidy.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yrachidy.github.io/" />
+  <meta property="og:title" content="Yassine Rachidy" />
+  <meta property="og:description" content="PhD student at UM6P working on LLM safety, alignment, and mechanistic interpretability." />
+  <meta property="og:image" content="https://yrachidy.github.io/assets/profile.jpg" />
+  <meta name="twitter:card" content="summary" />
+
+  <meta name="google-site-verification" content="1zEKqBkE8L6HFAnJ_votE03Ct0GQkd7OJoMEIeeS3Eo" />
+
+  <meta name="theme-color" content="#FCFBF9" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)" />
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PF0JL3KE2H"></script>
   <script>
@@ -15,110 +46,210 @@
 
     gtag('config', 'G-PF0JL3KE2H');
   </script>
-
-  <meta name="description" content="Yassine Rachidy is a PhD candidate at UM6P working on LLM robustness and alignment." />
-
-  <meta name="google-site-verification" content="1zEKqBkE8L6HFAnJ_votE03Ct0GQkd7OJoMEIeeS3Eo" />
-
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <main>
+  <div class="page">
 
-    <header>
+    <div class="topbar">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" />
+        </svg>
+        <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" />
+          <path d="M12 2.6v2.1M12 19.3v2.1M4.4 4.4l1.5 1.5M18.1 18.1l1.5 1.5M2.6 12h2.1M19.3 12h2.1M4.4 19.6l1.5-1.5M18.1 5.9l1.5-1.5" />
+        </svg>
+      </button>
+    </div>
 
-      <div class="header-main">
+    <header class="hero">
 
-        <h1>YASSINE RACHIDY</h1>
+      <div class="hero-text">
 
-        <!-- <p class="status-badge">
-          <span class="status-dot"></span>
-          Open to visiting research positions in LLM safety & alignment (Available starting November 2026)
-        </p> -->
+        <h1>Yassine Rachidy</h1>
+
+        <p>
+          I am a PhD student at
+          <a href="https://www.um6p.ma/" target="_blank" rel="noopener">University Mohammed VI Polytechnic (UM6P)</a>,
+          working on LLM safety and alignment. I am supervised by
+          <a href="https://scholar.google.com/citations?user=CPwNXK4AAAAJ" target="_blank" rel="noopener">Prof. Amal El Fallah Seghrouchni</a>
+          and
+          <a href="https://scholar.google.com/citations?user=YGCY3YoAAAAJ" target="_blank" rel="noopener">Dr. Youssef Hmamouche</a>.
+        </p>
+
+        <p>
+          I am currently focused on mechanistic interpretability of LLM safety mechanisms
+          and on translating those insights into more reliable defenses.
+        </p>
+
+        <nav class="docs" aria-label="Documents">
+          <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume<span class="arrow" aria-hidden="true">&#8599;</span></a>
+          <a href="assets/research-statement.pdf" target="_blank" rel="noopener">Research statement<span class="arrow" aria-hidden="true">&#8599;</span></a>
+        </nav>
+
+        <nav class="contact" aria-label="Contact">
+          <span class="email-wrap">
+            <a class="email" href="mailto:yassine.rachidy@um6p.ma" title="Click to copy">yassine.rachidy@um6p.ma</a>
+            <span id="toast" class="toast" role="status" aria-live="polite"></span>
+          </span>
+          <span class="sep" aria-hidden="true"></span>
+          <a href="https://www.linkedin.com/in/yassine-rachidy" target="_blank" rel="noopener">LinkedIn</a>
+          <span class="sep" aria-hidden="true"></span>
+          <a href="https://github.com/yrachidy" target="_blank" rel="noopener">GitHub</a>
+        </nav>
 
       </div>
 
-      <div class="header-row">
-
-        <div class="header-body">
-
-          <p>
-            I am a PhD candidate at
-            <a href="https://www.um6p.ma/" target="_blank">University Mohammed VI Polytechnic (UM6P)</a>,
-            working on LLM safety and alignment. I am supervised by
-            <a href="https://scholar.google.com/citations?user=CPwNXK4AAAAJ" target="_blank">Prof. Amal El Fallah Seghrouchni</a> and <a href="https://scholar.google.com/citations?user=YGCY3YoAAAAJ" target="_blank">Dr. Youssef Hmamouche</a>.
-          </p>
-
-          <p>
-            I am currently focused on mechanistic interpretability of LLM safety mechanisms and on translating those insights into more reliable defenses.
-          </p>
-
-          <nav class="links">
-            <a href="https://www.linkedin.com/in/yassine-rachidy" target="_blank">LinkedIn</a>
-            <a href="https://github.com/yrachidy" target="_blank">GitHub</a>
-            <a href="mailto:yassine.rachidy@um6p.ma">Email</a>
-            <a href="assets/resume.pdf" target="_blank">Resume</a>
-          </nav>
-
-        </div>
-
-        <img
-          src="assets/profile.jpg"
-          alt="Yassine Rachidy"
-          class="profile-photo"
-        />
-
-      </div>
+      <img class="portrait" src="assets/profile.jpg" alt="Yassine Rachidy" width="190" height="212" />
 
     </header>
 
+    <p class="invitation">
+      If my research connects with your own work, I would be glad to hear from you,
+      whether to exchange ideas or to explore a collaboration. Thank you for reading.
+    </p>
 
-    <section>
-      <h2><span class="label-prefix">// </span>NEWS</h2>
+    <section class="section">
+      <h2 class="section-title">News</h2>
 
-      <ul class="news-list">
+      <ul class="news">
         <li>
-          <span class="date">06/2026</span>
-          <span>Strategic Deflection accepted for publication in <em>Computational Linguistics</em></span>
+          <time class="news-date" datetime="2026-09">Sep 2026</time>
+          <p>Strategic Deflection will be presented at EMNLP 2026.</p>
+        </li>
+        <li>
+          <time class="news-date" datetime="2026-06">Jun 2026</time>
+          <p>Strategic Deflection accepted for publication in <em>Computational Linguistics</em>.</p>
         </li>
       </ul>
     </section>
 
-    <section>
-      <h2><span class="label-prefix">// </span>PAPERS</h2>
+    <section class="section">
+      <h2 class="section-title">Papers</h2>
 
-      <div class="paper">
-        <h3>Strategic Deflection: Defending LLMs from Logit Manipulation</h3>
-        <p class="authors">
-          <span class="me">Yassine Rachidy</span>, Jihad R'baiti, Youssef Hmamouche, Faissal Sehbaoui, Amal El Fallah Seghrouchni
-        </p>
-        <p class="venue">Computational Linguistics, 2026</p>
-        <div class="paper-links">
-          <a href="https://direct.mit.edu/coli/article/doi/10.1162/COLI.a.645/137893" target="_blank">paper</a>
-        </div>
-      </div>
+      <ol class="papers">
 
-      <div class="paper">
-        <h3>Domain Adaptive Document Reranking for Retrieval Augmented Generation</h3>
-        <p class="authors">
-          <span class="me">Yassine Rachidy</span>, Youssef Hmamouche, Faissal Sehbaoui, Amal El Fallah Seghrouchni
-        </p>
-        <p class="venue">37th International Conference on Tools with Artificial Intelligence (ICTAI), 2025</p>
-        <div class="paper-links">
-          <a href="https://ieeexplore.ieee.org/document/11272725/" target="_blank">paper</a>
-        </div>
-      </div>
+        <li class="paper">
+          <h3>Strategic Deflection: Defending LLMs from Logit Manipulation</h3>
+          <p class="authors">
+            <span class="me">Yassine Rachidy</span>, Jihad R'baiti, Youssef Hmamouche, Faissal Sehbaoui, Amal El Fallah Seghrouchni
+          </p>
+          <p class="venue">Computational Linguistics &middot; 2026</p>
+          <p class="paper-links">
+            <a href="https://direct.mit.edu/coli/article/doi/10.1162/COLI.a.645/137893" target="_blank" rel="noopener">Paper<span class="arrow" aria-hidden="true">&#8599;</span></a>
+          </p>
+        </li>
 
+        <li class="paper">
+          <h3>Domain Adaptive Document Reranking for Retrieval Augmented Generation</h3>
+          <p class="authors">
+            <span class="me">Yassine Rachidy</span>, Youssef Hmamouche, Faissal Sehbaoui, Amal El Fallah Seghrouchni
+          </p>
+          <p class="venue">International Conference on Tools with Artificial Intelligence (ICTAI) &middot; 2025</p>
+          <p class="paper-links">
+            <a href="https://ieeexplore.ieee.org/document/11272725/" target="_blank" rel="noopener">Paper<span class="arrow" aria-hidden="true">&#8599;</span></a>
+          </p>
+        </li>
+
+      </ol>
     </section>
 
-  </main>
+    <footer class="site-footer">
+      <span>Last updated September 2026</span>
+    </footer>
 
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById('theme-toggle');
+      var media = window.matchMedia('(prefers-color-scheme: dark)');
+
+      function effective() {
+        var set = root.getAttribute('data-theme');
+        if (set === 'light' || set === 'dark') return set;
+        return media.matches ? 'dark' : 'light';
+      }
+
+      function label() {
+        btn.setAttribute(
+          'aria-label',
+          effective() === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
+        );
+      }
+
+      btn.addEventListener('click', function () {
+        var next = effective() === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        label();
+      });
+
+      media.addEventListener('change', label);
+
+      label();
+    })();
+
+    (function () {
+      var link = document.querySelector('.email');
+      var toast = document.getElementById('toast');
+      var timer;
+
+      function notify(message) {
+        toast.textContent = message;
+        toast.classList.add('is-visible');
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          toast.classList.remove('is-visible');
+        }, 1900);
+      }
+
+      function copy(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        }
+
+        return new Promise(function (resolve, reject) {
+          var field = document.createElement('textarea');
+          field.value = text;
+          field.setAttribute('readonly', '');
+          field.style.position = 'fixed';
+          field.style.top = '-1000px';
+          field.style.opacity = '0';
+          document.body.appendChild(field);
+          field.select();
+
+          var ok = false;
+          try {
+            ok = document.execCommand('copy');
+          } catch (e) {
+            ok = false;
+          }
+
+          document.body.removeChild(field);
+          ok ? resolve() : reject();
+        });
+      }
+
+      link.addEventListener('click', function (event) {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+          return;
+        }
+
+        event.preventDefault();
+        var address = link.textContent.trim();
+
+        copy(address).then(function () {
+          notify('Copied');
+        }).catch(function () {
+          window.location.href = 'mailto:' + address;
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
