@@ -91,8 +91,8 @@
 
         <nav class="contact" aria-label="Contact">
           <span class="email-wrap">
-            <a class="email" href="mailto:yassine.rachidy@um6p.ma" title="Click to copy">yassine.rachidy@um6p.ma</a>
-            <span id="toast" class="toast" role="status" aria-live="polite"></span>
+            <span class="email-label">Email (click to decode):</span>
+            <button class="email" type="button" data-state="locked" title="Click to reveal" aria-label="Reveal email address">eWFzc2luZS5yYWNoaWR5QHVtNnAubWE=</button>
           </span>
           <span class="sep" aria-hidden="true"></span>
           <a href="https://www.linkedin.com/in/yassine-rachidy" target="_blank" rel="noopener">LinkedIn</a>
@@ -192,62 +192,22 @@
 
       label();
     })();
+  </script>
 
+  <script>
     (function () {
-      var link = document.querySelector('.email');
-      var toast = document.getElementById('toast');
-      var timer;
+      var el = document.querySelector('.email');
+      var encoded = el.textContent;
 
-      function notify(message) {
-        toast.textContent = message;
-        toast.classList.add('is-visible');
-        clearTimeout(timer);
-        timer = setTimeout(function () {
-          toast.classList.remove('is-visible');
-        }, 1900);
-      }
-
-      function copy(text) {
-        if (navigator.clipboard && window.isSecureContext) {
-          return navigator.clipboard.writeText(text);
-        }
-
-        return new Promise(function (resolve, reject) {
-          var field = document.createElement('textarea');
-          field.value = text;
-          field.setAttribute('readonly', '');
-          field.style.position = 'fixed';
-          field.style.top = '-1000px';
-          field.style.opacity = '0';
-          document.body.appendChild(field);
-          field.select();
-
-          var ok = false;
-          try {
-            ok = document.execCommand('copy');
-          } catch (e) {
-            ok = false;
-          }
-
-          document.body.removeChild(field);
-          ok ? resolve() : reject();
-        });
-      }
-
-      link.addEventListener('click', function (event) {
-        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
-          return;
-        }
-
-        event.preventDefault();
-        var address = link.textContent.trim();
-
-        copy(address).then(function () {
-          notify('Copied');
-        }).catch(function () {
-          window.location.href = 'mailto:' + address;
-        });
-      });
+      el.addEventListener('click', function () {
+        var address = atob(encoded);
+        var link = document.createElement('a');
+        link.className = 'email';
+        link.href = 'mailto:' + address;
+        link.textContent = address;
+        el.replaceWith(link);
+        document.querySelector('.email-label').textContent = 'Email:';
+      }, { once: true });
     })();
   </script>
 
